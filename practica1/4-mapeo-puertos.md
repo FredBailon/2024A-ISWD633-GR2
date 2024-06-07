@@ -16,7 +16,7 @@ docker run -d --name srv-web4 -p 3000:80 nginx:alpine
 
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA  DEL ACCESO http://localhost:3000
+![mapeo](imagenes/2.png)
 
 ### Para mapear más de un puerto
 
