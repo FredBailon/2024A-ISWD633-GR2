@@ -7,7 +7,7 @@ Es un archivo único que contiene todos los programas, librerías, dependencias 
 
 
 ## ¿Cuál es la relación entre una imagen y un contenedor? 
-# COMPLETAR 
+Las imágenes representan una instantánea o un esquema de las bibliotecas y dependencias necesarias dentro de un contenedor para que se ejecute una aplicación. Por otro lado, un contenedor de Docker es una instancia de una imagen. Es como una máquina virtual ligera que contiene la aplicación, sus dependencias y configuraciones. Los contenedores basicamente se basan en las imagenes.
 
 ![Imagen y contenedores](imagenes/imagenYcontenedores.JPG)
 ## Comandos para imágenes
@@ -27,13 +27,17 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+```
+docker pull hello-world
+```
 
 **¿Qué es nginx**
-# COMPLETAR 
+es un servidor web y proxy inverso de código abierto que también funciona como balanceador de carga, proxy de correo electrónico, y caché HTTP. Fue creado por Igor Sysoev y su primera versión pública se lanzó en 2004. Nginx es conocido por su alto rendimiento, estabilidad y bajo consumo de recursos, lo que lo hace ideal para manejar grandes volúmenes de tráfico web. 
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+```
+docker pull nginx:alpine
+```
 
 ### Listar imágenes
 
@@ -41,7 +45,6 @@ Descargar la imagen  **nginx** en la versión **alpine**
 docker images
 ```
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
 **Identificadores**
 En Docker, se utilizan varios identificadores para diferenciar de manera única los elementos del sistema, como imágenes, contenedores, volúmenes y redes. Estos identificadores son generados automáticamente por Docker y son únicos dentro del contexto del sistema Docker en el que se encuentran. 
@@ -55,10 +58,12 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
-# COMPLETAR
+```
+docker inspect <nombre imagen>
+```
 
 **¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+Docker genera automáticamente cuando se construye una imagen. Este ID es un identificador único que Docker utiliza para referirse a la imagen en sus operaciones internas.
 
 ### Filtrar imágenes
 
@@ -75,7 +80,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
-# COMPLETAR
+```
+docker rmi hello-world:latest
+```
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
 Cuando eliminas una imagen Docker, Docker no elimina automáticamente los contenedores que se han creado a partir de esa imagen. Esto significa que, aunque hayas eliminado la imagen, el contenedor seguirá ejecutándose normalmente.  
